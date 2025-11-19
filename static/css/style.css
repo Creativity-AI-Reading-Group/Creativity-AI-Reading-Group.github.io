@@ -78,17 +78,54 @@ nav { display: flex; justify-content: space-between; padding: 1rem 2rem; align-i
 .social-icons a:hover svg { fill: var(--primary); }
 
 /* HERO SECTION LAYOUT */
+/* HERO SECTION LAYOUT */
 .hero {
     position: relative;
-    background: #fcfcfc; /* Very subtle grey */
+    background: #fcfcfc;
     padding: 4rem 2rem;
-    min-height: 500px;
+    /* Remove fixed min-height to let content dictate size */
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Keeps blobs from scrolling page */
+    overflow: hidden;
 }
 
+.hero-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row; /* Default to row */
+    align-items: center; /* Vertically center text with image */
+    justify-content: center;
+    gap: 2rem; /* Nice tight gap */
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap; /* Only wrap if screen is very small */
+}
+
+.hero-content {
+    /* Grow: 1, Shrink: 1, Basis: 300px 
+       This allows the text to shrink to fit next to the image */
+    flex: 1 1 300px; 
+    text-align: left; /* Force text to left */
+    min-width: 300px; /* Don't let it get too squashed */
+}
+
+.illustration-container {
+    /* Grow: 1, Shrink: 1, Basis: 400px */
+    flex: 1 1 400px;
+    max-width: 500px; /* Prevent it from getting massive */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Force the SVG to fill its container properly */
+.illustration-container svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 /* 1. BACKGROUND BLOBS (Fixed Z-Index) */
 .svg-bg {
     position: absolute;
@@ -115,7 +152,17 @@ nav { display: flex; justify-content: space-between; padding: 1rem 2rem; align-i
 
     /* 2. Tweak Hero Spacing */
     .hero { padding: 2rem 1rem; }
-    .hero-wrapper { gap: 2rem; text-align: center; }
+    .hero-wrapper {
+        flex-direction: column-reverse; /* Image on top, Text on bottom (optional) or just column */
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .hero-content {
+        text-align: center; /* Center text only on mobile */
+        padding: 0;
+    }
     
     /* 3. Make the Illustration stack properly */
     .illustration-container {
