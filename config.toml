@@ -1,0 +1,21 @@
+baseURL = 'Creativity-AI-Reading-Group.github.io'
+languageCode = 'en-us'
+title = 'AI & Creativity Study Group'
+
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+  [[menus.main]]
+    name = 'Sessions'
+    pageRef = '/sessions'
+    weight = 20
+  [[menus.main]]
+    name = 'People'
+    pageRef = '/people'
+    weight = 30
+  [[menus.main]]
+    name = 'Resources'
+    pageRef = '/resources'
+    weight = 40

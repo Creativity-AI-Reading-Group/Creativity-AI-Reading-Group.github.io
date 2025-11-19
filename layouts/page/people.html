@@ -1,0 +1,35 @@
+{{ define "main" }}
+<div class="container">
+    <h1>The People</h1>
+    
+    <section>
+        <h2>Main Organizers</h2>
+        <div class="people-grid">
+            {{ range .Site.Data.people.organizers }}
+            {{ partial "person-card.html" . }}
+            {{ end }}
+        </div>
+    </section>
+
+    <section>
+        <h2>Members</h2>
+        <div class="people-grid" id="members-grid">
+            {{ range .Site.Data.people.members }}
+            <div class="member-wrapper">
+                {{ partial "person-card.html" . }}
+            </div>
+            {{ end }}
+        </div>
+    </section>
+</div>
+
+<!-- Shuffle Script -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var container = document.getElementById("members-grid");
+        var elements = Array.from(container.getElementsByClassName("member-wrapper"));
+        elements.sort(() => Math.random() - 0.5);
+        elements.forEach(el => container.appendChild(el));
+    });
+</script>
+{{ end }}

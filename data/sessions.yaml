@@ -1,0 +1,23 @@
+# data/schedule.yaml
+upcoming:
+  - date: "TBD"
+    title: "TBD"
+    presenter: "Armin Tourajmehr & Mohammadreza Modarres"
+    description: "TBD"
+
+past:
+  - date: "2025-11-17"
+    title: "Kaufman & Sternberg (2019). The Cambridge Handbook of Creativity. 2nd ed"
+    presenter: "Mohammadali Yousefzadeh"
+    description: "Second chapters of part I"
+    materials: []
+        
+  - date: "2025-11-01"
+    title: "Kaufman & Sternberg (2019). The Cambridge Handbook of Creativity. 2nd ed"
+    presenter: "Mohammad Azimi"
+    description: "First chapters of part I"
+    materials: # Empty list if no materials
+      - type: "Slides1"
+        url: "uploads/session1/Creativityp.pptx"
+      - type: "Slides2"
+        url: "uploads/session1/History_of_Creativity.pptx"

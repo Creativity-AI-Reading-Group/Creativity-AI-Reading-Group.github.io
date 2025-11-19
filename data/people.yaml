@@ -1,0 +1,42 @@
+organizers:
+  - name: "Yadollah Yaghoobzadeh"
+    role: "Assistant Professor"
+    org: "School of ECE, College of Engineering, University of Tehran"
+    # Use a local path (file inside static/images/people/) OR a URL /https://api.dicebear.com/7.x/avataaars/svg?seed=Bob
+    image: "images/people/DrYaghoubzadeh.jpg"
+    social:
+      - service: "linkedin"
+        url: "https://www.linkedin.com/in/yyaghoobzadeh"
+      - service: "website"
+        url: "https://yyaghoobzadeh.github.io/"
+
+members:
+  - name: "Amir Mesbah"
+    role: "Researcher"
+    org: ""
+    image: "images/people/Amir_Mesbah.jpg"
+    social:
+      - service: "linkedin"
+        url: "https://www.linkedin.com/in/amirhossein-mesbah/"
+      - service: "website"
+        url: "https://amirhosein-mesbah.github.io"
+      - service: "twitter"
+        url: "https://x.com/Amirh_mesbah"
+
+  - name: "Zahra Habibzadeh"
+    role: "Researcher"
+    image: "images/people/zahra_habibzadeh.jpg"
+    social:
+      - service: "linkedin"
+        url: "https://www.linkedin.com/in/zahra-habibzade/"
+      - service: "website"
+        url: "https://zaha2020.github.io/"
+      - service: "twitter"
+        url: "https://twitter.com/zaha_habibzadeh"
+
+  - name: "	Paria Khoshtab"
+    role: "Researcher"
+    image: "images/people/Paria_Khostab.jpg"
+    social:
+      - service: "linkedin"
+        url: "https://www.linkedin.com/in/paria-khoshtab-92a593217/"

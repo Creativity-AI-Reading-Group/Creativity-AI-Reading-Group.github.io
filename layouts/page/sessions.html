@@ -1,0 +1,39 @@
+{{ define "main" }}
+<div class="container">
+    <h1>Session Log</h1>
+    <p>A history of our discussions, presentations, and shared knowledge.</p>
+
+    <div class="table-wrapper">
+    <table class="session-table">
+        <thead>
+            <tr>
+                <th style="width: 15%;">Date</th>
+                <th style="width: 20%;">Presenter</th>
+                <th style="width: 40%;">Topic & Description</th>
+                <th style="width: 25%;">Materials</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Combine upcoming and past or just show past? Usually logs show past. -->
+            {{ range .Site.Data.sessions.past }}
+            <tr>
+                <td>{{ .date }}</td>
+                <td><strong>{{ .presenter }}</strong></td>
+                <td>
+                    <strong>{{ .title }}</strong><br>
+                    <small>{{ .description }}</small>
+                </td>
+                <td>
+                    {{ range .materials }}
+                    <a href="{{ .url }}" class="material-btn" target="_blank">⬇ {{ .type }}</a>
+                    {{ else }}
+                    <span style="color:#999; font-size:0.8rem;">No materials</span>
+                    {{ end }}
+                </td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+    </div>
+</div>
+{{ end }}
