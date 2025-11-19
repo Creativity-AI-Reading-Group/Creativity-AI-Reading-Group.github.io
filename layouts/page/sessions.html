@@ -25,7 +25,7 @@
                 </td>
                 <td>
                     {{ range .materials }}
-                    <a href="{{ .url }}" class="material-btn" target="_blank">⬇ {{ .type }}</a>
+                    <a href="{{ .url | relURL }}" class="material-btn" target="_blank">⬇ {{ .type }}</a>
                     {{ else }}
                     <span style="color:#999; font-size:0.8rem;">No materials</span>
                     {{ end }}
