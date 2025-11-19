@@ -12,8 +12,8 @@ title = 'AI & Creativity Study Group'
     pageRef = '/sessions'
     weight = 20
   [[menus.main]]
-    name = 'People'
-    pageRef = '/people'
+    name = 'Members'
+    pageRef = '/members'
     weight = 30
   [[menus.main]]
     name = 'Resources'

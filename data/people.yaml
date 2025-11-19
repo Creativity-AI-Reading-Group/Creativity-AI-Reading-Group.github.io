@@ -3,7 +3,7 @@ organizers:
     role: "Assistant Professor"
     org: "School of ECE, College of Engineering, University of Tehran"
     # Use a local path (file inside static/images/people/) OR a URL /https://api.dicebear.com/7.x/avataaars/svg?seed=Bob
-    image: "images/people/DrYaghoubzadeh.jpg"
+    image: "images/members/DrYaghoubzadeh.jpg"
     social:
       - service: "linkedin"
         url: "https://www.linkedin.com/in/yyaghoobzadeh"
@@ -14,7 +14,7 @@ members:
   - name: "Amir Mesbah"
     role: "Researcher"
     org: ""
-    image: "images/people/Amir_Mesbah.jpg"
+    image: "images/members/Amir_Mesbah.jpg"
     social:
       - service: "linkedin"
         url: "https://www.linkedin.com/in/amirhossein-mesbah/"
@@ -25,7 +25,7 @@ members:
 
   - name: "Zahra Habibzadeh"
     role: "Researcher"
-    image: "images/people/zahra_habibzadeh.jpg"
+    image: "images/members/zahra_habibzadeh.jpg"
     social:
       - service: "linkedin"
         url: "https://www.linkedin.com/in/zahra-habibzade/"
@@ -36,7 +36,7 @@ members:
 
   - name: "	Paria Khoshtab"
     role: "Researcher"
-    image: "images/people/Paria_Khostab.jpg"
+    image: "images/members/Paria_Khostab.jpg"
     social:
       - service: "linkedin"
         url: "https://www.linkedin.com/in/paria-khoshtab-92a593217/"
