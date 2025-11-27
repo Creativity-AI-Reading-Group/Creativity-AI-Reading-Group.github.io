@@ -1,6 +1,20 @@
 {{ define "main" }}
-<header class="hero">
-    <!-- 1. Background Ambiance -->
+
+<!-- 1. NEW COVER PHOTO SECTION -->
+<div class="cover-section">
+    <!-- The Real Image -->
+    <img src="{{ "images/cover.jpg" | relURL }}" alt="Cover Photo" class="cover-bg-img">
+    
+    <!-- The Shadow/Overlay -->
+    <div class="cover-overlay"></div> 
+    
+    <!-- The Text -->
+    <h1 class="cover-text">AI & Creativity Research Group</h1>
+</div>
+
+<!-- 2. DESCRIPTION SECTION (Formerly Hero) -->
+<section class="hero">
+    <!-- Background Ambiance -->
     <div class="svg-bg">
         <svg viewBox="0 0 200 200" style="position: absolute; top: -50px; left: -50px; width: 400px; opacity: 0.1; animation: floatBlob 8s ease-in-out infinite;">
             <path fill="#FF0066" d="M44.7,-76.4C58.9,-69.2,71.8,-59.1,79.6,-46.9C87.4,-34.7,90.1,-20.4,85.8,-7.4C81.5,5.6,70.2,17.3,60.9,27.9C51.6,38.5,44.3,48,35.3,56.1C26.3,64.2,15.6,70.9,3.5,72.9C-8.6,74.9,-22.1,72.2,-34.4,65.8C-46.7,59.4,-57.8,49.3,-66.5,37.6C-75.2,25.9,-81.5,12.6,-80.8,-0.4C-80.1,-13.4,-72.4,-26.1,-62.6,-36.3C-52.8,-46.5,-40.9,-54.2,-29.2,-62.8C-17.5,-71.4,-6,-80.9,7.1,-85C20.2,-89.1,40.4,-87.8,44.7,-76.4Z" transform="translate(100 100)" />
@@ -10,14 +24,13 @@
         </svg>
     </div>
     
-    <!-- 2. Foreground Content -->
     <div class="hero-wrapper">
         <div class="hero-content">
-            <h1>Exploring Creative Reasoning, Expression, and Evaluation in LLMs</h1>
+            <!-- Slight change: Removed the H1 since we have the cover now, used H2 instead -->
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">Exploring Creative Reasoning, Expression, and Evaluation in LLMs</h2>
             
             <p>Welcome to the LLM Creativity Study Group, a collaborative space for exploring how large language models (LLMs) think, create, and inspire.</p>
-            
-            <p>We meet to read, discuss, and experiment with ideas that connect <em>human creativity</em> with <em>computational intelligence</em> — from poetry and storytelling to analogy-making, problem-solving, and cross-lingual imagination.</p>
+            <p>We meet to read, discuss, and experiment with ideas that connect <em>human creativity</em> with <em>computational intelligence</em>.</p>
 
             <div class="hero-sub-section">
                 <h3>Mission</h3>
@@ -36,7 +49,7 @@
             </div>
         </div>
 
-        <!-- 3. Synced Animation SVG -->
+        <!-- The Synced Animation SVG -->
         <div class="illustration-container">
             <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto;">
                 <defs>
@@ -45,64 +58,29 @@
                         <stop offset="100%" style="stop-color:#00CC99" />
                     </linearGradient>
                 </defs>
-
-                <!-- Grid -->
                 <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
                     <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e0e0e0" stroke-width="0.5"/>
                 </pattern>
                 <rect width="500" height="400" fill="url(#smallGrid)" />
-
-                <!-- Contours (No Fill) -->
                 <path d="M50,100 Q150,20 350,50 Q450,60 450,200 Q450,350 250,350 Q50,350 50,200 Z" fill="none" stroke="#FF0066" stroke-width="1.5" stroke-opacity="0.6" />
                 <path d="M100,130 Q180,80 320,100 Q400,110 400,200 Q400,300 250,300 Q100,300 100,200 Z" fill="none" stroke="#9c27b0" stroke-width="1.5" stroke-opacity="0.6" />
                 <path d="M150,160 Q200,130 300,140 Q350,150 350,200 Q350,260 250,260 Q150,260 150,200 Z" fill="none" stroke="#2196f3" stroke-width="1.5" stroke-opacity="0.6" />
                 <path d="M200,180 Q220,170 280,180 Q300,190 300,210 Q300,230 250,230 Q200,230 200,210 Z" fill="rgba(0, 204, 153, 0.1)" stroke="#00CC99" stroke-width="2" />
-
-                <!-- SGD PATH (Line) -->
-                <!-- We use stroke-dasharray 400 (approx length) and animate the offset from 400 to 0 -->
-                <path id="sgd-line" 
-                      d="M50,100 C80,150 120,80 180,140 S 220,140 250,205" 
-                      fill="none" 
-                      stroke="url(#sgdGradient)" 
-                      stroke-width="4" 
-                      stroke-linecap="round"
-                      stroke-dasharray="400" 
-                      stroke-dashoffset="400">
-                    <!-- SYNCED ANIMATION: Line Drawing -->
-                    <animate attributeName="stroke-dashoffset" 
-                             from="400" to="0" 
-                             dur="3s" 
-                             repeatCount="indefinite"
-                             calcMode="spline" 
-                             keyTimes="0;1" 
-                             keySplines="0.42 0 0.58 1" />
+                <path id="sgd-line" d="M50,100 C80,150 120,80 180,140 S 220,140 250,205" fill="none" stroke="url(#sgdGradient)" stroke-width="4" stroke-linecap="round" stroke-dasharray="400" stroke-dashoffset="400">
+                    <animate attributeName="stroke-dashoffset" from="400" to="0" dur="3s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.42 0 0.58 1" />
                 </path>
-
-                <!-- THE AGENT (Dot) -->
                 <circle r="5" fill="#fff" stroke="#00CC99" stroke-width="2">
-                    <!-- SYNCED ANIMATION: Motion along path -->
-                    <!-- Note: Same dur, same keySplines as above -->
-                    <animateMotion dur="3s" 
-                                   repeatCount="indefinite" 
-                                   path="M50,100 C80,150 120,80 180,140 S 220,140 250,205" 
-                                   rotate="auto" 
-                                   calcMode="spline" 
-                                   keyTimes="0;1" 
-                                   keySplines="0.42 0 0.58 1" />
-                    
-                    <!-- Pulse effect (Independent timing, so it doesn't matter) -->
+                    <animateMotion dur="3s" repeatCount="indefinite" path="M50,100 C80,150 120,80 180,140 S 220,140 250,205" rotate="auto" calcMode="spline" keyTimes="0;1" keySplines="0.42 0 0.58 1" />
                     <animate attributeName="r" values="5;3;5" dur="1s" repeatCount="indefinite" />
                 </circle>
-
-                <!-- Global Minima Marker -->
                 <circle cx="250" cy="205" r="3" fill="#00CC99" />
             </svg>
         </div>
     </div>
-</header>
+</section>
 
+<!-- 3. SESSION & CALENDAR SECTION -->
 <section class="container">
-    <!-- Next Session Card -->
     <div class="next-session card">
         {{ with index .Site.Data.sessions.upcoming 0 }}
         <h2>📅 Next Session</h2>
@@ -112,7 +90,6 @@
         {{ end }}
     </div>
     
-    <!-- Google Calendar -->
     <div style="margin-top: 3rem;">
         <h3 style="text-align:center; margin-bottom:1rem;">Upcoming Schedule</h3>
         <iframe src="https://calendar.google.com/calendar/embed?src=de244cb2d2fcb10e0b36b206d09742053cb1f1bd100c896c1887983ce5496dd8%40group.calendar.google.com&ctz=Asia%2FTehran" style="border: 0; border-radius: 10px;" width="100%" height="400" frameborder="0" scrolling="no"></iframe>

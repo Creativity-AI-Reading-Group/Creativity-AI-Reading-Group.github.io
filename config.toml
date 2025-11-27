@@ -8,9 +8,13 @@ title = 'AI & Creativity Study Group'
     pageRef = '/'
     weight = 10
   [[menus.main]]
-    name = 'Sessions'
+    name = 'Publications'
+    pageRef = '/publications'
+    weight = 20 # Adjust weight to place it where you want (e.g., between Sessions and Members)
+  [[menus.main]]
+    name = 'Reading Group'
     pageRef = '/sessions'
-    weight = 20
+    weight = 25
   [[menus.main]]
     name = 'Members'
     pageRef = '/members'

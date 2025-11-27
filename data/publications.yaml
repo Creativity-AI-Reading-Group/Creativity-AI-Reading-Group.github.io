@@ -1,0 +1,28 @@
+ongoing:
+  - title: "TBD"
+    authors: "TBD et al"
+    description: "TBD"
+    # Optional links for ongoing work
+    # arxiv: "https://arxiv.org/..." 
+    # file: "uploads/publications/draft-v1.pdf" 
+
+published:
+  - title: "TBD"
+    authors: "TBD et al"
+    year: 2025
+    venue: "TBD"
+    # arxiv: "https://arxiv.org/..."
+    # link: "https://iclr.cc/..."
+    # file: "uploads/publications/paper1.pdf"
+
+  # - title: "A Survey of Computational Creativity"
+  #   authors: "Sarah Lee, Armin Tourajmehr"
+  #   year: 2025
+  #   venue: "Nature Machine Intelligence"
+  #   file: "uploads/publications/paper2.pdf"
+
+  # - title: "Old School AI Methods"
+  #   authors: "Bob Brown"
+  #   year: 2024
+  #   venue: "NeurIPS 2024"
+  #   file: "" # Leave empty if no file

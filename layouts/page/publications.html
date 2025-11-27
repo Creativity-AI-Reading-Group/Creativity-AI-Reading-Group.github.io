@@ -1,0 +1,40 @@
+{{ define "main" }}
+<div class="container">
+    <h1 style="margin-bottom: 2rem; text-align: center;">Publications</h1>
+    
+    <!-- SECTION 1: ON-GOING WORK -->
+    <!-- Added 'ongoing-section' class for specific styling -->
+    <section class="pub-section ongoing-section">
+        <h2 class="section-title">🚧 On-going Work</h2>
+        <div class="pub-list">
+            {{ range .Site.Data.publications.ongoing }}
+                {{ partial "pub-card.html" . }}
+            {{ end }}
+        </div>
+    </section>
+
+    <!-- VISUAL SEPARATOR BETWEEN SECTIONS -->
+    <hr class="section-divider">
+
+    <!-- SECTION 2: PUBLISHED PAPERS -->
+    <section class="pub-section">
+        <h2 class="section-title">📚 Published Papers</h2>
+        
+        {{ $papers := sort .Site.Data.publications.published "year" "desc" }}
+        {{ $currentYear := "" }}
+
+        {{ range $papers }}
+            <!-- Year Separator with Line -->
+            {{ if ne .year $currentYear }}
+                <div class="year-separator">
+                    <span class="year-label">{{ .year }}</span>
+                    <span class="year-line"></span>
+                </div>
+                {{ $currentYear = .year }}
+            {{ end }}
+
+            {{ partial "pub-card.html" . }}
+        {{ end }}
+    </section>
+</div>
+{{ end }}
